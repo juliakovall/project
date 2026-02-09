@@ -54,11 +54,13 @@
 }
 
 .hero-title {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-size: clamp(32px, 4.2vw, 64px);
-  line-height: 1.1;
-  margin-bottom: 16px;
+  font-family: "Raleway", system-ui, sans-serif;
+  font-weight: 600; /* ⬅ как в макете */
+  font-size: clamp(34px, 4.6vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -0.01em; /* делает аккуратнее, не жирнее */
+  color: #1b1f2a;
+  margin-bottom: 18px;
 }
 
 .hero-subtitle {

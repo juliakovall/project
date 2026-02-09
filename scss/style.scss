@@ -1,23 +1,32 @@
-// @use "variables";
-// @use "base";
-// @use "navbar";
-// @use "hero";
-// @use "sections";
-// @use "cards";
-// @use "footer";
-/* 1) normalize */
-@import "../node_modules/normalize.css/normalize.css";
+// // @use "variables";
+// // @use "base";
+// // @use "navbar";
+// // @use "hero";
+// // @use "sections";
+// // @use "cards";
+// // @use "footer";
+// /* 1) normalize */
+// @import "../node_modules/normalize.css/normalize.css";
 
-/* 2) твои переменные (до bootstrap) */
-@import "./variables";
+// /* 2) твои переменные (до bootstrap) */
+// @import "./variables";
 
-/* 3) bootstrap */
-@import "../node_modules/bootstrap/scss/bootstrap";
+// /* 3) bootstrap */
+// @import "../node_modules/bootstrap/scss/bootstrap";
 
-/* 4) твои модули */
-@import "./base";
-@import "./navbar";
-@import "./hero";
-@import "./section";
-@import "./cards";
-@import "./footer";
+// /* 4) твои модули */
+// @import "./base";
+// @import "./navbar";
+// @import "./hero";
+// @import "./section";
+// @import "./cards";
+// @import "./footer";
+@import "variables";
+@import "base";
+
+/* дальше твои файлы (если они есть) */
+@import "navbar";
+@import "hero";
+@import "section";
+@import "cards";
+@import "footer";

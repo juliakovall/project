@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Головна</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Твой CSS (скомпилированный из SCSS) -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+      <div class="container">
+        <a
+          class="navbar-brand fw-bold d-flex align-items-center gap-2"
+          href="#"
+        >
+          <span class="brand-dot"></span>
+          Асоціація «Джерело»
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+          aria-controls="mainMenu"
+          aria-expanded="false"
+          aria-label="Відкрити меню"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Про нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Проєкти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#partners">Партнери</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Команда</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
+
+          <a class="btn btn-warning ms-lg-3 mt-3 mt-lg-0" href="#donate"
+            >Підтримати</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-section">
+      <!-- размытые эллипсы (фон) -->
+      <span class="hero-blob hero-blob--left" aria-hidden="true"></span>
+      <span class="hero-blob hero-blob--right" aria-hidden="true"></span>
+
+      <div class="container hero-inner">
+        <nav class="hero-menu d-none d-lg-flex">
+          <a href="#directions">Наші напрямки</a>
+          <a href="#partners">Наші партнери</a>
+          <a href="#reports" class="is-active">Звіти</a>
+          <a href="#news">Новини</a>
+          <a href="#contacts">Контакти</a>
+        </nav>
+
+        <h1 class="hero-title">Українська Асоціація «Джерело»</h1>
+
+        <p class="hero-subtitle">
+          Розвиток та підтримка української діаспори в Каталонії,<br />
+          Іспанії з 2012 року
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn hero-btn hero-btn--blue" href="#contacts">Зв'язатись</a>
+          <a class="btn hero-btn hero-btn--yellow" href="#donate">Підтримати</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <div class="col-12 col-lg-6">
+            <h2 class="section-title">Хто ми та що робимо</h2>
+            <p class="text-muted">Текст про асоціацію. 2–3 речення.</p>
+
+            <div class="info-card info-card--blue mt-4">
+              <h5 class="mb-2">Основні цілі та завдання діяльності</h5>
+              <ul class="list-check">
+                <li>Соціальні ініціативи</li>
+                <li>Освітні програми</li>
+                <li>Благодійні проєкти</li>
+                <li>Підтримка спільнот</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="row g-3">
+              <div class="col-12">
+                <img
+                  class="img-fluid rounded-4"
+                  src="./img/about.jpg"
+                  alt="About"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  class="img-fluid rounded-4"
+                  src="./img/project-1.jpg"
+                  alt="Photo 1"
+                />
+              </div>
+              <div class="col-6">
+                <img
+                  class="img-fluid rounded-4"
+                  src="./img/project-2.jpg"
+                  alt="Photo 2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="row g-4 mt-4">
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number">10</div>
+              <div class="stat-text">років роботи</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number">70+</div>
+              <div class="stat-text">волонтерів</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number">150+</div>
+              <div class="stat-text">подій</div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <div class="stat-number">25</div>
+              <div class="stat-text">проєктів</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--light">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+        >
+          <h2 class="section-title m-0">Наші проєкти</h2>
+          <a class="btn btn-outline-primary" href="#">Дивитись всі</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card card-project h-100">
+              <img
+                class="card-img-top"
+                src="./img/project-1.jpg"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Проєкт 1</h5>
+                <p class="card-text text-muted">Короткий опис.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 pb-4">
+                <a class="btn btn-primary w-100" href="#">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card card-project h-100">
+              <img
+                class="card-img-top"
+                src="./img/project-2.jpg"
+                alt="Project 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Проєкт 2</h5>
+                <p class="card-text text-muted">Короткий опис.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 pb-4">
+                <a class="btn btn-primary w-100" href="#">Детальніше</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card card-project h-100">
+              <img
+                class="card-img-top"
+                src="./img/project-1.jpg"
+                alt="Project 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Проєкт 3</h5>
+                <p class="card-text text-muted">Короткий опис.</p>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0 pb-4">
+                <a class="btn btn-primary w-100" href="#">Детальніше</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATE -->
+    <section id="donate" class="section">
+      <div class="container">
+        <div class="donate-box p-4 p-lg-5 rounded-4">
+          <div class="row align-items-center gy-3">
+            <div class="col-12 col-lg-8">
+              <h2 class="fw-bold mb-2">Підтримайте нашу діяльність</h2>
+              <p class="text-muted mb-0">Навіть невеликий внесок допомагає.</p>
+            </div>
+            <div class="col-12 col-lg-4 text-lg-end">
+              <a class="btn btn-warning btn-lg w-100 w-lg-auto" href="#">
+                Хочу допомогти
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section id="partners" class="section section--light">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">Ключові партнери</h2>
+
+        <div class="row g-3 justify-content-center">
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="partner-chip">Partner 1</div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="partner-chip partner-chip--yellow">Partner 2</div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="partner-chip">Partner 3</div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="partner-chip">Partner 4</div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="partner-chip">Partner 5</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">Наша команда</h2>
+
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <img
+              class="team-img rounded-circle mb-2"
+              src="./img/team-1.jpg"
+              alt="Team 1"
+            />
+            <h6 class="m-0">Ім’я Прізвище</h6>
+            <small class="text-muted">Посада</small>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <img
+              class="team-img rounded-circle mb-2"
+              src="./img/team-2.jpg"
+              alt="Team 2"
+            />
+            <h6 class="m-0">Ім’я Прізвище</h6>
+            <small class="text-muted">Посада</small>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <img
+              class="team-img rounded-circle mb-2"
+              src="./img/team-1.jpg"
+              alt="Team 3"
+            />
+            <h6 class="m-0">Ім’я Прізвище</h6>
+            <small class="text-muted">Посада</small>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <img
+              class="team-img rounded-circle mb-2"
+              src="./img/team-2.jpg"
+              alt="Team 4"
+            />
+            <h6 class="m-0">Ім’я Прізвище</h6>
+            <small class="text-muted">Посада</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS / FOOTER -->
+    <footer id="contacts" class="footer py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-12 col-lg-6">
+            <h4 class="fw-bold mb-3">Контакти</h4>
+            <p class="mb-2">Телефон: +380 XX XXX XX XX</p>
+            <p class="mb-2">Email: example@gmail.com</p>
+            <p class="mb-0">Адреса: Україна</p>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps?q=kyiv&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Map"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4 opacity-25" />
+        <div class="d-flex justify-content-between flex-wrap gap-2">
+          <small>© 2026 Асоціація «Джерело»</small>
+          <small>Зроблено на Bootstrap</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle (для бургера!) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

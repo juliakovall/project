@@ -1,0 +1,40 @@
+// .card {
+//   border: none;
+//   border-radius: $radius;
+//   box-shadow: $shadow;
+
+//   img {
+//     border-radius: $radius $radius 0 0;
+//   }
+// }
+.card-project {
+  border: 0;
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+}
+
+.donate-box {
+  background: #fff;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.partner-chip {
+  background: #fff;
+  border-radius: 999px;
+  padding: 12px 14px;
+  text-align: center;
+  box-shadow: $shadow;
+  font-weight: 700;
+
+  &--yellow {
+    background: $yellow;
+  }
+}
+
+.team-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}

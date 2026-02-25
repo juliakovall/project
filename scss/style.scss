@@ -1,34 +1,85 @@
-// // @use "variables";
-// // @use "base";
-// // @use "navbar";
-// // @use "hero";
-// // @use "sections";
-// // @use "cards";
-// // @use "footer";
-// /* 1) normalize */
-// @import "../node_modules/normalize.css/normalize.css";
+@use "variables";
+@use "mixins";
+@use "header";
+@use "slider";
+@use "about";
+@use "goals";
+@use "numbers";
+@use "video";
+@use "projects";
+@use "events";
+@use "possibilities";
+@use "partners";
+@use "news";
+@use "team";
+@use "contacts";
+@use "footer";
+@use "about-humanitarian";
+@use "who";
 
-// /* 2) твои переменные (до bootstrap) */
-// @import "./variables";
+body {
+  font-family: "Raleway";
+}
 
-// /* 3) bootstrap */
-// @import "../node_modules/bootstrap/scss/bootstrap";
+.bg-hands {
+  background-image: url("../img/hands.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
 
-// /* 4) твои модули */
-// @import "./base";
-// @import "./navbar";
-// @import "./hero";
-// @import "./section";
-// @import "./cards";
-// @import "./footer";
-@import "variables";
-@import "base";
+.decorated-bg {
+  position: relative;
+  background: variables.$color-white;
+  overflow: visible;
+}
 
-/* дальше твои файлы (если они есть) */
-@import "navbar";
-@import "hero";
-@import "section";
-@import "cards";
-@import "footer";
-@import "ticker";
-@import "topbar";
+.decorated-bg::before,
+.decorated-bg::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 1;
+  z-index: 0;
+
+  @include mixins.respond(xl) {
+    filter: blur(200px);
+  }
+}
+
+.decorated-bg::before {
+  width: 134px;
+  height: 134px;
+  background: #0d6efd;
+  top: 200px;
+  left: -70px;
+
+  @include mixins.respond(xl) {
+    width: 355px;
+    height: 355px;
+    top: 456px;
+    left: -151px;
+  }
+}
+
+.decorated-bg::after {
+  width: 134px;
+  height: 134px;
+  background: #ffc107;
+  top: 69px;
+  right: 65px;
+
+  @include mixins.respond(xl) {
+    width: 355px;
+    height: 355px;
+    top: 148px;
+    right: 0;
+  }
+}
+
+.decorated-bg .container {
+  position: relative;
+}

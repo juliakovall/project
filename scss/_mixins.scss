@@ -1,0 +1,23 @@
+@use "variables";
+
+@mixin button($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-size: 20px;
+
+  @include respond(xl) {
+    font-size: 24px;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

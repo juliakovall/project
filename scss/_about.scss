@@ -11,7 +11,7 @@
   }
 }
 
-.about-title {
+.about__title {
   margin-bottom: 20px;
 
   @include mixins.respond(xl) {
@@ -20,31 +20,31 @@
   }
 }
 
-.about-text-first,
-.about-text-second {
+.about__text--first,
+.about__text--second {
   margin-bottom: 10px;
   @include mixins.respond(xl) {
     font-size: 30px !important;
   }
 }
 
-.about-text-first {
+.about__text--first {
   @include mixins.respond(xl) {
     margin-bottom: 30px;
   }
 }
 
-.about-text-second {
+.about__text--second {
   @include mixins.respond(xl) {
     margin-bottom: 0;
   }
 }
 
-.about-accent {
+.about__accent {
   color: variables.$color-blue;
 }
 
-.about-desc {
+.about__desc {
   @include mixins.respond(xl) {
     font-size: 18px;
   }

@@ -1,141 +1,87 @@
-// .hero-section {
-//   padding: 80px 0;
-
-//   h1 {
-//     font-weight: 800;
-//   }
-
-//   .btn-warning {
-//     background-color: $yellow;
-//     border: none;
-//   }
-// }
 .hero-section {
   position: relative;
   overflow: hidden;
+  padding-bottom: 48px;
 
-  /* было много — делаем ближе к макету */
-  padding: 46px 0 0; /* верх меньше, низ 0 чтобы тикер был вплотную */
-  background: #f6f8fb;
+  /* Full-width background like the mock */
+  background: linear-gradient(
+    90deg,
+    rgba(180, 209, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0.65) 48%,
+    rgba(255, 236, 180, 0.6) 100%
+  );
 }
 
+/* blurry ellipses */
+.hero-blob {
+  position: absolute;
+  z-index: 0;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.65;
+}
+
+.hero-blob--left {
+  left: -160px;
+  top: 220px;
+  background: rgba(95, 160, 255, 0.55);
+}
+
+.hero-blob--right {
+  right: -160px;
+  top: 160px;
+  background: rgba(255, 208, 70, 0.55);
+}
+
+.site-header,
 .hero-inner {
   position: relative;
-  z-index: 2;
-  text-align: center;
-
-  /* ограничим ширину как в макете */
-  max-width: 1060px;
-  margin: 0 auto;
+  z-index: 1;
 }
 
-.hero-menu {
-  justify-content: center;
-  gap: 50px;
-  margin-bottom: 90px;
-  font-weight: 600;
-  font-size: 18px;
-
-  a {
-    color: #1b1f2a;
-    text-decoration: none;
-    opacity: 0.85;
-
-    &:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-  }
-
-  .is-active {
-    color: $blue;
-    opacity: 1;
-  }
+/* Hero content */
+.hero-inner {
+  padding-top: 86px;
+  padding-bottom: 52px;
+  text-align: center;
 }
 
 .hero-title {
-  font-family: "Raleway", system-ui, sans-serif;
-  font-weight: 600; /* ⬅ как в макете */
-  font-size: clamp(34px, 4.6vw, 72px);
-  line-height: 1.12;
-  letter-spacing: -0.01em; /* делает аккуратнее, не жирнее */
-  color: #1b1f2a;
-  margin-bottom: 18px;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 600;
+  margin: 0 0 18px;
 }
 
 .hero-subtitle {
-  color: $muted;
-  font-size: clamp(14px, 1.3vw, 18px);
+  font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 38px;
+  color: $muted;
+  margin: 0 0 34px;
 }
 
 .hero-actions {
   display: flex;
   justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 22px;
 }
 
 .hero-btn {
   border-radius: 999px;
-  padding: 16px 34px;
-  font-weight: 700;
-  font-size: 18px;
-  min-width: 240px;
+  padding: 18px 46px;
+  font-weight: 600;
   border: 0;
+  box-shadow: $shadow;
 }
 
 .hero-btn--blue {
   background: $blue;
   color: #fff;
-
-  &:hover {
-    filter: brightness(0.95);
-    color: #fff;
-  }
 }
 
 .hero-btn--yellow {
   background: $yellow;
-  color: #1b1f2a;
-
-  &:hover {
-    filter: brightness(0.97);
-    color: #1b1f2a;
-  }
-}
-
-/* Размытые эллипсы (фон) */
-.hero-blob {
-  position: absolute;
-  width: 640px;
-  height: 640px;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.45;
-  z-index: 1;
-}
-
-.hero-blob--left {
-  left: -260px;
-  top: 120px;
-  background: rgba(13, 110, 253, 0.32);
-}
-
-.hero-blob--right {
-  right: -280px;
-  top: 220px;
-  background: rgba(255, 193, 7, 0.35);
-}
-
-/* Мобилка: меньше отступы */
-@media (max-width: 575.98px) {
-  .hero-section {
-    padding: 90px 0 50px;
-  }
-
-  .hero-btn {
-    min-width: 100%;
-  }
+  color: $dark;
 }

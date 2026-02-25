@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Site</title>
 
-    <!-- Google Fonts (Raleway + Montserrat, но мы будем использовать только Raleway) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,390 +19,560 @@
       rel="stylesheet"
     />
 
-    <!-- ТВОЙ CSS (скомпилированный из SCSS) -->
+    <!-- ТВОЙ CSS -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- ✅ маленькая ВАЖНАЯ вставка (не ломает стили) -->
+    <!-- только для того, чтобы макет был как на скрине: 1440px и центр -->
+    <!-- <style>
+      .page-shell {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+    </style> -->
+    <style>
+      /* Контент как в макете: 1440px по центру */
+      .container {
+        max-width: 1440px;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- HERO + HEADER (общий фон, НЕ липкий) -->
-    <header class="hero-section">
-      <!-- размытые эллипсы фона -->
-      <span class="hero-blob hero-blob--left" aria-hidden="true"></span>
-      <span class="hero-blob hero-blob--right" aria-hidden="true"></span>
+    <!-- ✅ общая “рамка” страницы как в макете -->
+    <div class="page-shell">
+      <!-- HERO + HEADER -->
+      <header class="hero-section">
+        <!-- blobs -->
+        <span class="hero-blob hero-blob--left" aria-hidden="true"></span>
+        <span class="hero-blob hero-blob--right" aria-hidden="true"></span>
 
-      <!-- ШАПКА (topbar + navbar) -->
-      <div class="site-header">
-        <div class="container">
-          <!-- TOPBAR -->
-          <div class="topbar">
-            <div class="topbar-left">
-              <!-- ЛОГО (замени путь!) -->
-              <a href="#" class="logo-link">
-                <img class="logo" src="./img/Group.svg" alt="Джерело" />
-              </a>
-
-              <!-- соцсети (временно текстом; потом заменишь на svg) -->
-              <div class="social">
-                <a href="#" class="social-link" aria-label="WhatsApp">
-                  <img src="./img/whatsup.svg" alt="" class="social-icon" />
+        <!-- HEADER -->
+        <div class="site-header">
+          <div class="container">
+            <!-- TOPBAR -->
+            <div class="topbar">
+              <div class="topbar-left">
+                <a href="#" class="logo-link">
+                  <img class="logo" src="./img/Group.svg" alt="Джерело" />
                 </a>
 
-                <a href="#" class="social-link" aria-label="Facebook">
-                  <img src="./img/facebook.svg" alt="" class="social-icon" />
-                </a>
+                <div class="social">
+                  <a href="#" class="social-link" aria-label="WhatsApp">
+                    <img src="./img/whatsup.svg" alt="" class="social-icon" />
+                  </a>
+                  <a href="#" class="social-link" aria-label="Facebook">
+                    <img src="./img/facebook.svg" alt="" class="social-icon" />
+                  </a>
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <img src="./img/instagram.svg" alt="" class="social-icon" />
+                  </a>
+                  <a href="#" class="social-link" aria-label="Telegram">
+                    <img src="./img/telegram.svg" alt="" class="social-icon" />
+                  </a>
+                  <a href="#" class="social-link" aria-label="YouTube">
+                    <img src="./img/youtube.svg" alt="" class="social-icon" />
+                  </a>
+                </div>
+              </div>
 
-                <a href="#" class="social-link" aria-label="Instagram">
-                  <img src="./img/instagram.svg" alt="" class="social-icon" />
-                </a>
+              <div class="topbar-right">
+                <span class="topbar-item">
+                  <img src="./img/icons.svg" alt="" class="topbar-icon" />
+                  +34 641 35 22 51
+                </span>
 
-                <a href="#" class="social-link" aria-label="Telegram">
-                  <img src="./img/telegram.svg" alt="" class="social-icon" />
-                </a>
+                <span class="topbar-item">
+                  <img src="./img/icons2.svg" alt="" class="topbar-icon" />
+                  Carrer de Béjar, 38, Barcelona
+                </span>
 
-                <a href="#" class="social-link" aria-label="YouTube">
-                  <img src="./img/youtube.svg" alt="" class="social-icon" />
-                </a>
+                <button class="lang-btn" type="button">UKR ▼</button>
               </div>
             </div>
 
-            <div class="topbar-right">
-              <span class="topbar-item">
-                <img src="./img/icons.svg" alt="" class="topbar-icon" />
-                +34 641 35 22 51
-              </span>
+            <div class="header-divider"></div>
 
-              <span class="topbar-item">
-                <img src="./img/icons2.svg" alt="" class="topbar-icon" />
-                Carrer de Béjar, 38, Barcelona
-              </span>
-              <button class="lang-btn" type="button">UKR ▼</button>
+            <!-- NAV -->
+            <nav class="navbar navbar-expand-lg header-nav">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Відкрити меню"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="mainMenu"
+              >
+                <ul class="navbar-nav gap-lg-5 align-items-lg-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#directions">Наші напрямки</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#partners">Наші партнери</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link is-active" href="#reports">Звіти</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#news">Новини</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Контакти</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- HERO -->
+        <div class="container hero-inner">
+          <h1 class="hero-title">Українська Асоціація «Джерело»</h1>
+
+          <p class="hero-subtitle">
+            Розвиток та підтримка української діаспори в Каталонії,<br />
+            Іспанії з 2012 року
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn hero-btn hero-btn--blue" href="#contacts"
+              >Зв'язатись</a
+            >
+            <a class="btn hero-btn hero-btn--yellow" href="#donate"
+              >Підтримати</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- TICKER -->
+      <section class="ticker">
+        <div class="ticker__line ticker__line--top"></div>
+
+        <div class="ticker__viewport">
+          <div class="ticker__move">
+            <!-- ✅ важное: контент повторяем 2 раза ВНУТРИ одной строки,
+                 чтобы лента выглядела как в макете -->
+            <div class="ticker__row">
+              <span class="ticker__text">Допомагаємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Консультуємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Розвиваємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Інтегруємо</span
+              ><span class="ticker__sep"></span>
+
+              <span class="ticker__text">Допомагаємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Консультуємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Розвиваємо</span
+              ><span class="ticker__sep"></span>
+              <span class="ticker__text">Інтегруємо</span
+              ><span class="ticker__sep"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticker__line ticker__line--bottom"></div>
+      </section>
+
+      <!-- ABOUT (сделано как в макете: верх + низ с отступом 100px) -->
+      <section class="about-block">
+        <div class="container">
+          <h2 class="about-block__title">Хто ми та що робимо</h2>
+
+          <!-- ✅ ВЕРХНИЙ РЯД: слева мета/миссия, справа текст -->
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="about-block__lead">
+                <p class="about-block__line">
+                  <span class="about-block__accent">Наша мета:</span>
+                  сформувати позитивний імідж України як сучасної та привабливої
+                  європейської країни.
+                </p>
+
+                <p class="about-block__line">
+                  <span class="about-block__accent">Наша місія:</span>
+                  розвиток української діаспори в Іспанії задля зміцнення
+                  міжнародних зв'язків України та Іспанії.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="about-block__text">
+                <p>
+                  Ольга Дзюбан заснувала Асоціацію «Джерело» у 2012 році задля
+                  допомоги українцям.
+                </p>
+                <p>
+                  Українці, які опиняються в Іспанії, мають потребу у юридичних
+                  консультаціях та підтримці.
+                </p>
+                <p>
+                  Метою також є популяризація української культури та створення
+                  освітніх проектів.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="header-divider"></div>
+          <!-- ✅ НИЖНИЙ РЯД: отступ 100px делает .about-equal -->
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="about-equal">
+                <div class="goals-card">
+                  <h3 class="goals-card__title">
+                    Основними цілями діяльності Асоціації є:
+                  </h3>
 
-          <!-- NAVBAR (бургер работает) -->
-          <nav class="navbar navbar-expand-lg header-nav">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainMenu"
-              aria-controls="mainMenu"
-              aria-expanded="false"
-              aria-label="Відкрити меню"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="mainMenu"
-            >
-              <ul class="navbar-nav gap-lg-5 align-items-lg-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="#directions">Наші напрямки</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#partners">Наші партнери</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link is-active" href="#reports">Звіти</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#news">Новини</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contacts">Контакти</a>
-                </li>
-              </ul>
+                  <ul class="goals-card__list">
+                    <li>
+                      Розвиток українських освітніх, культурних, соціальних та
+                      екологічних проектів
+                    </li>
+                    <li>
+                      Організація заходів, спрямованих на обмін та
+                      взаємозбагачення українців
+                    </li>
+                    <li>Збереження українських культурних традицій</li>
+                    <li>Соціальна адаптація українців в Іспанії</li>
+                    <li>Промоція українських виробників</li>
+                    <li>Розвиток волонтерства в Каталонії</li>
+                    <li>Збір гуманітарної допомоги для України</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </nav>
-        </div>
-      </div>
 
-      <!-- HERO контент -->
-      <div class="container hero-inner">
-        <h1 class="hero-title">Українська Асоціація «Джерело»</h1>
+            <div class="col-lg-6">
+              <div class="about-equal">
+                <div class="photo-grid">
+                  <img src="./img/image 11.jpg" alt="Photo 1" />
+                  <img src="./img/Rectangle 34.jpg" alt="Photo 2" />
+                  <img
+                    class="photo-grid__big"
+                    src="./img/2130605972.jpg"
+                    alt="Photo 3"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <p class="hero-subtitle">
-          Розвиток та підтримка української діаспори в Каталонії,<br />
-          Іспанії з 2012 року
+<!-- NUMBERS -->
+<section class="numbers-section" id="reports">
+  <div class="container numbers-wrapper">
+    <h2 class="numbers-title">Асоціація «Джерело» у цифрах</h2>
+
+    <div class="row g-4 align-items-start">
+      <!-- LEFT COLUMN -->
+      <div class="col-lg-6">
+        <p class="numbers-text">
+          Станом на 01.09.2022 Гуманітарним Центром Асоціації надано допомогу понад 1
+          тисячі українських сімей, які тимчасово переміщені в Іспанію внаслідок війни в Україні...
         </p>
 
-        <div class="hero-actions">
-          <a class="btn hero-btn hero-btn--blue" href="#contacts">Зв'язатись</a>
-          <a class="btn hero-btn hero-btn--yellow" href="#donate">Підтримати</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <div class="row gy-4 align-items-start">
-          <div class="col-12 col-lg-6">
-            <h2 class="section-title">Хто ми та що робимо</h2>
-            <p class="text-muted">Текст про асоціацію. 2–3 речення.</p>
-
-            <div class="info-card info-card--blue mt-4">
-              <h5 class="mb-2">Основні цілі та завдання діяльності</h5>
-              <ul class="list-check">
-                <li>Соціальні ініціативи</li>
-                <li>Освітні програми</li>
-                <li>Благодійні проєкти</li>
-                <li>Підтримка спільнот</li>
-              </ul>
+        <div class="row numbers-grid g-4">
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">10 років</div>
+              <div class="numbers-item__sub">активної роботи в Іспанії</div>
             </div>
           </div>
 
-          <div class="col-12 col-lg-6">
-            <div class="row g-3">
-              <div class="col-12">
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">70+</div>
+              <div class="numbers-item__sub">культурних подій</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">40 000€</div>
+              <div class="numbers-item__sub">перераховано для допомоги Україні</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">понад 100</div>
+              <div class="numbers-item__sub">волонтерів залучили до допомоги</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">понад 2500</div>
+              <div class="numbers-item__sub">продуктових наборів</div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="numbers-item">
+              <div class="numbers-item__num">майже 100</div>
+              <div class="numbers-item__sub">людей відвідує курси</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="numbers-video mt-4">
+          <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Video"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="col-lg-6">
+        <h3 class="numbers-right-title">
+          Щодня послугами Гуманітарного центру Асоціації користуються всередньому 50 сімей
+        </h3>
+
+        <div class="row numbers-right-grid g-5 mt-3">
+          <div class="col-12">
+            <div class="numbers-right-item">
+              <div class="numbers-right-item__num">понад 150 тонн</div>
+              <div class="numbers-right-item__sub">зібраної гуманітарної допомоги для України</div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="numbers-right-item">
+              <div class="numbers-right-item__num">3 освітніх проекти</div>
+              <div class="numbers-right-item__sub">заснували у Барселоні</div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="numbers-right-item">
+              <div class="numbers-right-item__num">25 осіб</div>
+              <div class="numbers-right-item__sub">навчаються на курсах для абітурієнтів</div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="numbers-bottom-title mt-5">
+          Про наші плани на майбутнє розповідає засновниця Асоціації Ольга Дзюбан
+        </h4>
+
+        <p class="numbers-text mt-3">
+          Асоціація втілює у життя культурні, освітні, гуманітарні проекти...
+        </p>
+
+        <div class="numbers-actions mt-4">
+          <a class="btn numbers-btn numbers-btn--yellow" href="#donate">Підтримати</a>
+          <a class="btn numbers-btn numbers-btn--outline" href="#reports">Звіти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- дальше твои секции оставляем как есть -->
+      <section id="projects" class="section section--light">
+        <div class="container">
+          <div
+            class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+          >
+            <h2 class="section-title m-0">Наші проєкти</h2>
+            <a class="btn btn-outline-primary" href="#">Дивитись всі</a>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card card-project h-100">
                 <img
-                  class="img-fluid rounded-4"
-                  src="./img/about.jpg"
-                  alt="About"
-                />
-              </div>
-              <div class="col-6">
-                <img
-                  class="img-fluid rounded-4"
+                  class="card-img-top"
                   src="./img/project-1.jpg"
-                  alt="Photo 1"
+                  alt="Project 1"
                 />
-              </div>
-              <div class="col-6">
+                <div class="card-body">
+                  <h5 class="card-title">Проєкт 1</h5>
+                  <p class="card-text text-muted">Короткий опис.</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-4">
+                  <a class="btn btn-primary w-100" href="#">Детальніше</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card card-project h-100">
                 <img
-                  class="img-fluid rounded-4"
+                  class="card-img-top"
                   src="./img/project-2.jpg"
-                  alt="Photo 2"
+                  alt="Project 2"
                 />
+                <div class="card-body">
+                  <h5 class="card-title">Проєкт 2</h5>
+                  <p class="card-text text-muted">Короткий опис.</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-4">
+                  <a class="btn btn-primary w-100" href="#">Детальніше</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card card-project h-100">
+                <img
+                  class="card-img-top"
+                  src="./img/project-1.jpg"
+                  alt="Project 3"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Проєкт 3</h5>
+                  <p class="card-text text-muted">Короткий опис.</p>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0 pb-4">
+                  <a class="btn btn-primary w-100" href="#">Детальніше</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="donate" class="section">
+        <div class="container">
+          <div class="donate-box p-4 p-lg-5 rounded-4">
+            <div class="row align-items-center gy-3">
+              <div class="col-12 col-lg-8">
+                <h2 class="fw-bold mb-2">Підтримайте нашу діяльність</h2>
+                <p class="text-muted mb-0">
+                  Навіть невеликий внесок допомагає.
+                </p>
+              </div>
+              <div class="col-12 col-lg-4 text-lg-end">
+                <a class="btn btn-warning btn-lg w-100 w-lg-auto" href="#"
+                  >Хочу допомогти</a
+                >
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- STATS -->
-        <div class="row g-4 mt-4">
-          <div class="col-6 col-lg-3">
-            <div class="stat-card">
-              <div class="stat-number">10</div>
-              <div class="stat-text">років роботи</div>
+      <section id="partners" class="section section--light">
+        <div class="container">
+          <h2 class="section-title text-center mb-4">Ключові партнери</h2>
+
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="partner-chip">Partner 1</div>
             </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-card">
-              <div class="stat-number">70+</div>
-              <div class="stat-text">волонтерів</div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="partner-chip partner-chip--yellow">Partner 2</div>
             </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-card">
-              <div class="stat-number">150+</div>
-              <div class="stat-text">подій</div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="partner-chip">Partner 3</div>
             </div>
-          </div>
-          <div class="col-6 col-lg-3">
-            <div class="stat-card">
-              <div class="stat-number">25</div>
-              <div class="stat-text">проєктів</div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="partner-chip">Partner 4</div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="partner-chip">Partner 5</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section section--light">
-      <div class="container">
-        <div
-          class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
-        >
-          <h2 class="section-title m-0">Наші проєкти</h2>
-          <a class="btn btn-outline-primary" href="#">Дивитись всі</a>
-        </div>
+      <section id="team" class="section">
+        <div class="container">
+          <h2 class="section-title text-center mb-4">Наша команда</h2>
 
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card card-project h-100">
+          <div class="row g-4 text-center">
+            <div class="col-6 col-md-4 col-lg-3">
               <img
-                class="card-img-top"
-                src="./img/project-1.jpg"
-                alt="Project 1"
+                class="team-img rounded-circle mb-2"
+                src="./img/team-1.jpg"
+                alt="Team 1"
               />
-              <div class="card-body">
-                <h5 class="card-title">Проєкт 1</h5>
-                <p class="card-text text-muted">Короткий опис.</p>
-              </div>
-              <div class="card-footer bg-white border-0 pt-0 pb-4">
-                <a class="btn btn-primary w-100" href="#">Детальніше</a>
-              </div>
-            </article>
-          </div>
+              <h6 class="m-0">Ім’я Прізвище</h6>
+              <small class="text-muted">Посада</small>
+            </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card card-project h-100">
+            <div class="col-6 col-md-4 col-lg-3">
               <img
-                class="card-img-top"
-                src="./img/project-2.jpg"
-                alt="Project 2"
+                class="team-img rounded-circle mb-2"
+                src="./img/team-2.jpg"
+                alt="Team 2"
               />
-              <div class="card-body">
-                <h5 class="card-title">Проєкт 2</h5>
-                <p class="card-text text-muted">Короткий опис.</p>
-              </div>
-              <div class="card-footer bg-white border-0 pt-0 pb-4">
-                <a class="btn btn-primary w-100" href="#">Детальніше</a>
-              </div>
-            </article>
-          </div>
+              <h6 class="m-0">Ім’я Прізвище</h6>
+              <small class="text-muted">Посада</small>
+            </div>
 
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="card card-project h-100">
+            <div class="col-6 col-md-4 col-lg-3">
               <img
-                class="card-img-top"
-                src="./img/project-1.jpg"
-                alt="Project 3"
+                class="team-img rounded-circle mb-2"
+                src="./img/team-1.jpg"
+                alt="Team 3"
               />
-              <div class="card-body">
-                <h5 class="card-title">Проєкт 3</h5>
-                <p class="card-text text-muted">Короткий опис.</p>
+              <h6 class="m-0">Ім’я Прізвище</h6>
+              <small class="text-muted">Посада</small>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+              <img
+                class="team-img rounded-circle mb-2"
+                src="./img/team-2.jpg"
+                alt="Team 4"
+              />
+              <h6 class="m-0">Ім’я Прізвище</h6>
+              <small class="text-muted">Посада</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contacts" class="footer py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-12 col-lg-6">
+              <h4 class="fw-bold mb-3">Контакти</h4>
+              <p class="mb-2">Телефон: +380 XX XXX XX XX</p>
+              <p class="mb-2">Email: example@gmail.com</p>
+              <p class="mb-0">Адреса: Україна</p>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps?q=kyiv&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Map"
+                ></iframe>
               </div>
-              <div class="card-footer bg-white border-0 pt-0 pb-4">
-                <a class="btn btn-primary w-100" href="#">Детальніше</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DONATE -->
-    <section id="donate" class="section">
-      <div class="container">
-        <div class="donate-box p-4 p-lg-5 rounded-4">
-          <div class="row align-items-center gy-3">
-            <div class="col-12 col-lg-8">
-              <h2 class="fw-bold mb-2">Підтримайте нашу діяльність</h2>
-              <p class="text-muted mb-0">Навіть невеликий внесок допомагає.</p>
-            </div>
-            <div class="col-12 col-lg-4 text-lg-end">
-              <a class="btn btn-warning btn-lg w-100 w-lg-auto" href="#">
-                Хочу допомогти
-              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- PARTNERS -->
-    <section id="partners" class="section section--light">
-      <div class="container">
-        <h2 class="section-title text-center mb-4">Ключові партнери</h2>
-
-        <div class="row g-3 justify-content-center">
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="partner-chip">Partner 1</div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="partner-chip partner-chip--yellow">Partner 2</div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="partner-chip">Partner 3</div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="partner-chip">Partner 4</div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="partner-chip">Partner 5</div>
+          <hr class="my-4 opacity-25" />
+          <div class="d-flex justify-content-between flex-wrap gap-2">
+            <small>© 2026 Асоціація «Джерело»</small>
+            <small>Зроблено на Bootstrap</small>
           </div>
         </div>
-      </div>
-    </section>
+      </footer>
+    </div>
 
-    <!-- TEAM -->
-    <section id="team" class="section">
-      <div class="container">
-        <h2 class="section-title text-center mb-4">Наша команда</h2>
-
-        <div class="row g-4 text-center">
-          <div class="col-6 col-md-4 col-lg-3">
-            <img
-              class="team-img rounded-circle mb-2"
-              src="./img/team-1.jpg"
-              alt="Team 1"
-            />
-            <h6 class="m-0">Ім’я Прізвище</h6>
-            <small class="text-muted">Посада</small>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3">
-            <img
-              class="team-img rounded-circle mb-2"
-              src="./img/team-2.jpg"
-              alt="Team 2"
-            />
-            <h6 class="m-0">Ім’я Прізвище</h6>
-            <small class="text-muted">Посада</small>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3">
-            <img
-              class="team-img rounded-circle mb-2"
-              src="./img/team-1.jpg"
-              alt="Team 3"
-            />
-            <h6 class="m-0">Ім’я Прізвище</h6>
-            <small class="text-muted">Посада</small>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3">
-            <img
-              class="team-img rounded-circle mb-2"
-              src="./img/team-2.jpg"
-              alt="Team 4"
-            />
-            <h6 class="m-0">Ім’я Прізвище</h6>
-            <small class="text-muted">Посада</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS / FOOTER -->
-    <footer id="contacts" class="footer py-5">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-12 col-lg-6">
-            <h4 class="fw-bold mb-3">Контакти</h4>
-            <p class="mb-2">Телефон: +380 XX XXX XX XX</p>
-            <p class="mb-2">Email: example@gmail.com</p>
-            <p class="mb-0">Адреса: Україна</p>
-          </div>
-
-          <div class="col-12 col-lg-6">
-            <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps?q=kyiv&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Map"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-
-        <hr class="my-4 opacity-25" />
-        <div class="d-flex justify-content-between flex-wrap gap-2">
-          <small>© 2026 Асоціація «Джерело»</small>
-          <small>Зроблено на Bootstrap</small>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS bundle (для бургера!) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

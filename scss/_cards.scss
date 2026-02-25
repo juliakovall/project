@@ -1,40 +1,87 @@
-// .card {
-//   border: none;
-//   border-radius: $radius;
-//   box-shadow: $shadow;
-
-//   img {
-//     border-radius: $radius $radius 0 0;
-//   }
-// }
-.card-project {
-  border: 0;
+/* BLUE goals card */
+.goals-card {
+  background: $blue;
+  color: #fff;
   border-radius: $radius;
-  overflow: hidden;
+  padding: 56px;
   box-shadow: $shadow;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.donate-box {
-  background: #fff;
-  border-radius: $radius;
-  box-shadow: $shadow;
+.goals-card__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin: 0 0 10px;
+  max-width: 520px;
 }
 
-.partner-chip {
-  background: #fff;
-  border-radius: 999px;
-  padding: 12px 14px;
-  text-align: center;
-  box-shadow: $shadow;
-  font-weight: 700;
-
-  &--yellow {
-    background: $yellow;
-  }
+.goals-card__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.team-img {
-  width: 120px;
-  height: 120px;
+.goals-card__list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.goals-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $yellow;
+}
+
+/* PHOTO GRID (2 top + 1 big) */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 260px 1fr;
+  gap: 18px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: $radius-sm;
+  box-shadow: $shadow;
+}
+
+.photo-grid__big {
+  grid-column: 1 / -1;
+}
+
+/* STATS */
+.stat-card {
+  background: #fff;
+  border-radius: $radius;
+  padding: 22px;
+  box-shadow: $shadow;
+  height: 100%;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 30px;
+  font-weight: 700;
+  color: $dark;
+}
+
+.stat-text {
+  color: $muted;
+  font-size: 14px;
 }
